@@ -26,3 +26,13 @@ function mostrarAmigos() {
         }
     }
 }
+
+function sortearAmigo() {
+    let resultado = document.getElementById("resultado");   
+    if (amigos.length < 2) {
+        alert("Necesitas al menos dos amigos para hacer un sorteo.");
+        return;
+    }
+    let ganador = amigos[Math.floor(Math.random() * amigos.length)];
+    resultado.textContent = "El ganador del sorteo es: " + ganador;
+}
