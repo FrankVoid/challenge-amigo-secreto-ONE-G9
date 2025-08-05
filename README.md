@@ -25,3 +25,4 @@ Este proyecto es una aplicacion web parar practicar, al web permite
 - Mensajes cuando no hay elementos en la lista.
 - Sorteo aleatorio de los elementos de la lista.
 
+# Buena suerte.
