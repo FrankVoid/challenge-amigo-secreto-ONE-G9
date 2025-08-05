@@ -9,6 +9,7 @@ function agregarAmigo() {
         return;
     } else {
         amigos.push(nombre);
+        document.getElementById("amigo").value = "";
     }
 }
 
