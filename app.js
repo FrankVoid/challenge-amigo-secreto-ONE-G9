@@ -7,9 +7,22 @@ function agregarAmigo() {
     if (nombre === "") {
         alert("Por favor, ingresa un nombre.");
         return;
-    } else {
-        amigos.push(nombre);
-        document.getElementById("amigo").value = "";
-    }
+    } 
+    amigos.push(nombre);
+    document.getElementById("amigo").value = "";
+    mostrarAmigos();
 }
 
+function mostrarAmigos() {
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
+    if (amigos.length === 0) {
+        lista.innerHTML = "<li>No hay amigos agregados.</li>";
+    } else {
+        for (let i = 0; i < amigos.length; i++) {
+            let li = document.createElement("li");
+            li.textContent = amigos[i];
+            lista.appendChild(li);
+        }
+    }
+}
